@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <>
       <motion.section
-        className="w-full flex flex-col-reverse py-16 md:flex-row mt-[85px]"
+        className="w-full h-screen flex flex-col-reverse py-16 md:flex-row"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

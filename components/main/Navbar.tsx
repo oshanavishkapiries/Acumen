@@ -24,60 +24,62 @@ const NavLink = ({ href, label }: { href: string; label: string }) => (
 
 const Navbar = () => {
   return (
-    <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 justify-between fixed z-50 bg-background top-0 left-0">
-      <div className="w-[170px] lg:mr-auto">
-        <Link href="/" prefetch={false}>
-          <Image src="/ACUMEN.png" alt="logo" width={170} height={50} />
-        </Link>
-      </div>
+    <>
+      <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 justify-between fixed z-50 bg-background top-0 left-0">
+        <div className="w-[170px] lg:mr-auto">
+          <Link href="/" prefetch={false}>
+            <Image src="/ACUMEN.png" alt="logo" width={170} height={50} />
+          </Link>
+        </div>
 
-      {/* Desktop Navigation */}
-      <div className="hidden w-full justify-center lg:flex">
-        <nav className="flex items-center gap-6 text-lg font-semibold">
-          {navLinks.map(({ href, label }) => (
-            <NavLink key={label} href={href} label={label} />
-          ))}
-        </nav>
-      </div>
-
-      {/* Desktop Buttons */}
-      <div className="ml-auto gap-2 hidden lg:flex">
-        <Button variant="outline">Sign in</Button>
-        <Button>Sign up</Button>
-      </div>
-
-      {/* Mobile Navigation */}
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button
-            variant="outline"
-            size="icon"
-            className="lg:hidden border-none"
-          >
-            <MenuIcon className="h-6 w-6" />
-            <span className="sr-only">Toggle navigation menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="right">
-          <nav className="grid gap-4 py-6">
+       
+        <div className="hidden w-full justify-center lg:flex">
+          <nav className="flex items-center gap-6 text-lg font-semibold">
             {navLinks.map(({ href, label }) => (
-              <Link
-                key={label}
-                href={href}
-                className="flex w-full items-center py-2 text-lg font-semibold"
-                prefetch={false}
-              >
-                {label}
-              </Link>
+              <NavLink key={label} href={href} label={label} />
             ))}
-            <div className="flex flex-col gap-2">
-              <Button variant="outline">Sign in</Button>
-              <Button>Sign up</Button>
-            </div>
           </nav>
-        </SheetContent>
-      </Sheet>
-    </header>
+        </div>
+
+      
+        <div className="ml-auto gap-2 hidden lg:flex">
+          <Button variant="outline">Sign in</Button>
+          <Button>Sign up</Button>
+        </div>
+
+        
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button
+              variant="outline"
+              size="icon"
+              className="lg:hidden border-none"
+            >
+              <MenuIcon className="h-6 w-6" />
+              <span className="sr-only">Toggle navigation menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right">
+            <nav className="grid gap-4 py-6">
+              {navLinks.map(({ href, label }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  className="flex w-full items-center py-2 text-lg font-semibold"
+                  prefetch={false}
+                >
+                  {label}
+                </Link>
+              ))}
+              <div className="flex flex-col gap-2">
+                <Button variant="outline">Sign in</Button>
+                <Button>Sign up</Button>
+              </div>
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </header>
+    </>
   );
 };
 
