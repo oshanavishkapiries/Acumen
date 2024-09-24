@@ -50,7 +50,7 @@ const Hero = () => {
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Get in touch
             </h2>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-4 text-1">
               Have a question or want to work together? Fill out the form below
               and we&apos;ll get back to you as soon as possible.
             </p>

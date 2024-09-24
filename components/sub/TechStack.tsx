@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// Tech stack data
+
 const techStackData = [
   { Icon: "/tech-icon/angular.svg", label: "Angular" },
   { Icon: "/tech-icon/gitlab.svg", label: "GitLab" },
@@ -19,7 +19,7 @@ const techStackData = [
   { Icon: "/tech-icon/aws.png", label: "AWS" },
 ];
 
-// Individual TechItem component
+
 const TechItem = ({ Icon, label }: { Icon: string; label: string }) => {
   return (
     <motion.div
@@ -54,10 +54,10 @@ const TechStack = () => {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <h2 className="h3">
               Tech Stack
             </h2>
-            <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[700px] text-1">
               The technologies we use to build amazing products.
             </p>
           </div>

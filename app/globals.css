@@ -80,4 +80,10 @@
     @apply md:text-[48px] md:leading-[48px];
     @apply lg:text-[64px] lg:leading-[64px];
   }
+  .h3 {
+    @apply text-3xl font-bold tracking-tight text-foreground sm:text-4xl;
+  }
+  .text-1 {
+    @apply text-muted-foreground md:text-xl lg:text-lg;
+  }
 }

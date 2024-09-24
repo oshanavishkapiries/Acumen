@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const AboutUs = () => {
-  // Animation variants
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3, // Stagger animation for children
+        staggerChildren: 0.3, 
       },
     },
   };
@@ -27,7 +27,7 @@ const AboutUs = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }} // Triggers when 30% of the section is in view
+      viewport={{ once: true, amount: 0.3 }} 
     >
       <div className="grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
         <motion.div
@@ -41,13 +41,13 @@ const AboutUs = () => {
             About Us
           </motion.div>
           <motion.h2
-            className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl"
+            className="h3"
             variants={itemVariants}
           >
             Discover Our Story
           </motion.h2>
           <motion.p
-            className="w-full text-muted-foreground md:text-xl lg:text-lg"
+            className="w-full text-1"
             variants={itemVariants}
           >
             We are a team of passionate individuals dedicated to creating

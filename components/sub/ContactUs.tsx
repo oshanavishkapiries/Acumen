@@ -37,20 +37,24 @@ const ContactDetail: React.FC<{ label: string; content: string }> = ({
 );
 
 const ContactUs: React.FC = () => {
-  // Animation variants
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3, // stagger animation for children elements
+        staggerChildren: 0.3, 
       },
     },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 100 },
+    },
   };
 
   return (
@@ -59,18 +63,18 @@ const ContactUs: React.FC = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }} // Trigger when 30% of the section is in view
+      viewport={{ once: true, amount: 0.3 }} 
     >
       <div className="grid gap-12 px-4 md:px-6 lg:grid-cols-2 lg:gap-24">
         <motion.div className="space-y-4" variants={itemVariants}>
           <motion.h2
-            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
+            className="h3"
             variants={itemVariants}
           >
             Contact Us
           </motion.h2>
           <motion.p
-            className="max-w-[600px] text-muted-foreground md:text-xl/relaxed"
+            className="max-w-[600px] text-1"
             variants={itemVariants}
           >
             Have a question or want to work together? Fill out the form or reach
