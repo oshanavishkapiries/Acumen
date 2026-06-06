@@ -1,4 +1,5 @@
 import { ChromaFlow, FilmGrain, FlutedGlass, Shader, Swirl } from 'shaders/react'
+import Hero from '../components/Hero'
 
 export default function Home() {
   return (
@@ -30,38 +31,11 @@ export default function Home() {
           <FilmGrain strength={0.05} />
         </Shader>
       </div>
-      <div className="relative z-20 flex flex-1 flex-col">
-        <div className="flex-1" />
-        <div className="mx-auto w-full max-w-[1440px] px-5 pb-14 sm:px-8 sm:pb-16 lg:px-12 lg:pb-20">
-          <p className="mb-5 text-[13px] tracking-wide text-gray-900 sm:mb-8 sm:text-[14px] uppercase font-semibold">
-            BEETLECODE (PVT) LTD
-          </p>
-          <h1 className="max-w-[1120px] text-[clamp(1.75rem,7vw,4.2rem)] font-medium leading-[1.08] tracking-[-0.03em] text-gray-900 sm:text-[clamp(2.5rem,5vw,4.2rem)]">
-            Code Smart. Build Strong.
-            <br className="hidden sm:block" />
-            <span className="sm:hidden"> </span>
-            Grow Digital.
-          </h1>
-          <p className="mt-6 max-w-[600px] text-[15px] font-medium leading-[1.6] text-gray-800 sm:mt-8 sm:text-[17px]">
-            BeetleCode crafts resilient, AI-driven digital ecosystems that accelerate enterprise transformation.
-          </p>
-          
-          <div className="mt-8 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:items-center sm:gap-6">
-            <a
-              href="mailto:info@beetlecode.com"
-              className="group inline-flex w-fit items-center gap-3 rounded-full bg-[#FF6B6B] py-3 px-6 text-[14px] font-medium text-white transition-colors duration-300 hover:bg-[#FF4C4C]"
-            >
-              Get in touch
-            </a>
-            
-            <div className="flex gap-4 text-[14px] font-medium">
-              <a href="https://www.tiktok.com/@beetlecode" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-[#FF6B6B] transition-colors">TikTok</a>
-              <a href="https://www.youtube.com/@BeetleCode" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-[#FF6B6B] transition-colors">YouTube</a>
-              <a href="https://www.instagram.com/beetlecode.global/" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-[#FF6B6B] transition-colors">Instagram</a>
-              <a href="https://web.facebook.com/beetlecode.global" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-[#FF6B6B] transition-colors">Facebook</a>
-            </div>
-          </div>
-        </div>
+      <Hero />
+      
+      {/* Empty section for scroll testing */}
+      <div className="relative z-20 flex min-h-screen w-full items-center justify-center bg-white">
+        <p className="text-xl font-medium text-gray-400">Next Section (Scroll Test)</p>
       </div>
     </>
   )
