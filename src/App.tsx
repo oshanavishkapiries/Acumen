@@ -23,17 +23,17 @@ function RollingText({ text }: { text: string }) {
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [londonTime, setLondonTime] = useState('00:00')
+  const [slTime, setSlTime] = useState('00:00')
 
   useEffect(() => {
     const formatter = new Intl.DateTimeFormat('en-GB', {
       hour: '2-digit',
       minute: '2-digit',
       hour12: false,
-      timeZone: 'Europe/London',
+      timeZone: 'Asia/Colombo',
     })
 
-    const updateTime = () => setLondonTime(formatter.format(new Date()))
+    const updateTime = () => setSlTime(formatter.format(new Date()))
 
     updateTime()
 
@@ -44,22 +44,22 @@ function App() {
   return (
     <div className="bg-white text-gray-900">
       <section className="relative flex min-h-screen flex-col overflow-hidden bg-[#EFEFEF]">
-        <header className="relative z-20 px-2 pt-2 sm:px-3 sm:pt-3">
-          <div className="mx-auto max-w-[1440px]">
-            <nav className="relative flex items-center justify-between rounded-full bg-white p-[5px] pl-4 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+        <header className="relative z-20 w-full bg-white shadow-sm">
+          <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
+            <nav className="relative flex h-20 items-center justify-between">
               <div className="flex items-center">
                 <NavLink to="/">
-                  <img src="/logo.svg" alt="Platform Logo" className="h-6 w-auto" />
+                  <img src="/logo.svg" alt="BeetleCode Logo" className="h-5 w-auto" />
                 </NavLink>
               </div>
 
-              <div className="hidden items-center gap-6 md:absolute md:left-1/2 md:flex md:-translate-x-1/2">
+              <div className="hidden items-center gap-8 md:absolute md:left-1/2 md:flex md:-translate-x-1/2">
                 {navLinks.map((link) => (
                   <NavLink
                     key={link.name}
                     to={link.path}
                     className={({ isActive }) =>
-                      `text-[14px] font-medium transition-colors duration-300 ${
+                      `text-[16px] font-normal transition-colors duration-300 ${
                         isActive ? 'text-[#FF6B6B]' : 'text-gray-900 hover:text-gray-500'
                       }`
                     }
@@ -113,7 +113,7 @@ function App() {
             >
               <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-gray-200 px-3 py-1.5 text-[13px] text-gray-600">
                 <Clock3 size={14} />
-                <span>{londonTime} in London</span>
+                <span>{slTime} in Sri Lanka</span>
               </div>
 
               <div className="flex flex-col gap-4">
@@ -123,7 +123,7 @@ function App() {
                     to={link.path}
                     onClick={() => setIsMenuOpen(false)}
                     className={({ isActive }) =>
-                      `text-[28px] font-medium leading-[32px] tracking-[-0.02em] ${
+                      `text-[28px] font-normal leading-[32px] tracking-[-0.02em] ${
                         isActive ? 'text-[#FF6B6B]' : 'text-gray-900'
                       }`
                     }
