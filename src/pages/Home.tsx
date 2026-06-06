@@ -19,7 +19,7 @@ export default function Home() {
           <FlutedGlass
             aberration={0.61}
             angle={31}
-            frequency={8}
+            frequency={24}
             highlight={0.12}
             highlightSoftness={0}
             lightAngle={-90}

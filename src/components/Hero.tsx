@@ -5,7 +5,7 @@ export default function Hero() {
     <div className="relative z-20 flex min-h-[calc(100vh-80px)] w-full flex-col overflow-hidden pt-12 lg:pt-0">
       
       {/* Background Globe Section for Desktop (Shifted right to cut off) */}
-      <div className="pointer-events-none absolute right-0 top-1/2 z-10 hidden w-[150vh] -translate-y-1/2 translate-x-[35%] opacity-90 lg:block">
+      <div className="pointer-events-none absolute right-0 top-1/2 z-10 hidden w-[150vh] -translate-y-1/2 translate-x-[35%] lg:block">
         <Earth />
       </div>
 
@@ -35,7 +35,7 @@ export default function Hero() {
       </div>
 
       {/* Background Globe Section for Mobile (Anchored at bottom) */}
-      <div className="pointer-events-none absolute -bottom-[15%] left-1/2 z-10 w-[150vw] max-w-[800px] -translate-x-1/2 opacity-90 lg:hidden">
+      <div className="pointer-events-none absolute -bottom-[15%] left-1/2 z-10 w-[150vw] max-w-[800px] -translate-x-1/2 lg:hidden">
         <Earth />
       </div>
 

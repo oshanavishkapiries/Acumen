@@ -39,8 +39,10 @@ export default function Earth() {
 
   return (
     <div className="w-full aspect-square relative mx-auto lg:ml-auto flex items-center justify-center">
+      <div className="absolute w-[88%] h-[88%] bg-white rounded-full blur-2xl" />
       <canvas
         ref={canvasRef}
+        className="relative z-10"
         style={{
           width: '100%',
           height: '100%',
